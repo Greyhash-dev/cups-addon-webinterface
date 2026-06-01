@@ -28,7 +28,10 @@ RUN \
         gcompat \
         libstdc++ \
         dpkg \
-        jq
+        jq \
+	python3 \
+	py3-flask \
+	git
 
 # Copy data
 COPY rootfs /

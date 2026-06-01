@@ -172,4 +172,10 @@ echo "Available printer drivers:"
 lpinfo -m 2>/dev/null | head -20 || echo "CUPS not yet running; drivers will be listed after start."
 
 # Start CUPS service
-/usr/sbin/cupsd -f
+/usr/sbin/cupsd
+
+# Mods here
+git clone https://github.com/Koushikphy/Web-Printer.git /share/cups/Web-Printer/
+
+cd /share/cups/Web-Printer/
+python3 web_printer.py
